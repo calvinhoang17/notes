@@ -48,6 +48,38 @@ mkfs.exfat TARGET
   -p SECTOR        specifie first sector
   -s SECTORS       defines number of physical sectors
 
+mkfs.btrfs TARGET
+  -L LABEL        set label
+  -m DEVICES      pass mulitple devices (raid0, raid1, raid5, raid6, raid10, single, dup)
+
+  Creating btrfs subvolume
+    btrsfs subvolume create TARGET
+    btrsfs subvolume show TARGET
+
+parted DEVICE
+  select DEVICE
+  print                               show more info
+  print devices                       show all devices
+  print free                          show free devices
+  mklabel (msdos, gpt)                create partition table
+  mkpart PARTTYPE FSTYPE START END    create partition
+  rm DEVICE                           to remove a device
+  rescue START END                    recover partition
+  resizepart START END                resize partition
+  resize2fs DEVICE SIZE               resize filesystem
+  mkswap TARGET                       create swap partition
+  swapon TARGET                       enable swap partition
+  
+
+
+
+
+
+
+
+
+
+
 
 
 ```
