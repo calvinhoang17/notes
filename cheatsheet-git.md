@@ -17,7 +17,7 @@ Show commit log
 ```
 git log
 ```
-##Staging Environment
+## Staging Environment
 Add file to staging environment
 ```
 git add [FILE]
@@ -32,7 +32,7 @@ To skip staging
 git commit -a -m "MESSAGE"
 ```
 
-#Branches
+## Branches
 ```
 git branch [NAME]
 ```
@@ -49,7 +49,7 @@ Delete a branch
 git branch -d [BRANCHNAME]
 ```
 
-##Pull from GitHub
+## Pull from GitHub
 Gets all change history 
 ```
 git fetch origin
