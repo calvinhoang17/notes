@@ -17,7 +17,7 @@ Show commit log
 ```
 git log
 ```
-#Staging Environment
+##Staging Environment
 Add file to staging environment
 ```
 git add [FILE]
@@ -49,7 +49,7 @@ Delete a branch
 git branch -d [BRANCHNAME]
 ```
 
-#Pull from GitHub
+##Pull from GitHub
 Gets all change history 
 ```
 git fetch origin
@@ -67,7 +67,7 @@ Pull (fetch + merge)
 git pull origin
 ```
 
-#Github Cloning repo
+##Github Cloning repo
 ```
 git clone [LINK]
 ```
