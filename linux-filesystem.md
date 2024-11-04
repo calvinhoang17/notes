@@ -101,7 +101,13 @@ lsof DEVICE
     remount                   use with -o to remount with different options
     sync / async              do all I/O ops to filesystem synchronously or asynchronously
 
-  
+```
+### File permissions and ownership
+```
+
+
+
+
 
 
 
