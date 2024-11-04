@@ -1,22 +1,20 @@
 ### GIT 
 
-Setup 
+## Setup 
 ```
 git config --global user.name "NAME"
 git config --global user.email "EMAIL" 
-```
+
 Initialize Git on working directory
-```
 git init
-```
+
 Shows repo status 
-```
 git status
-```
+
 Show commit log
-```
 git log
 ```
+
 ## Staging Environment
 Add file to staging environment
 ```
