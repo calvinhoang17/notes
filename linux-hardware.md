@@ -12,8 +12,17 @@
     -d       specify device
     -t       show mappings as hierarchical tree
      
+  lsmod      #shows all currently loaded modules
+  modprobe   #use to load and unload kernal modules
+    -r          unload modules
+  modinfo    #shows modules desc, file, author, license, and other info
+    -p          display only avaiable parameters
 
-
+  /proc
+    -  /cpuinfo      #list detaile info about CPU
+    -  /interrupts   #list number of interrupts per IO device
+    -  /ioports      #list currently registered input/outpit port regions in use
+    -  /dma          #list registered DMA channels in use 
 ```
 
 
