@@ -70,6 +70,38 @@ parted DEVICE
   mkswap TARGET                       create swap partition
   swapon TARGET                       enable swap partition
   
+mount -t TYPE DEVICE MOUNTPOINT
+  -a        mount all filesystems listed in /etc/fstab
+  -o        pass a list of comma-separated mount options
+  -r -ro    mount as read-only
+  -w -rw    mount as writeable
+
+unmount MOUNTPOINT
+  -a        unmount all filesystmes in /etc/fstab
+  -f        force unmounting
+  -r        if cannot unmount, will try to make it read-only
+
+lsof DEVICE
+  shows list of processes accesing the files currently
+
+/etc/fstab
+  FILESSYSTEM MOUNTPOINT TYPE OPTIONS DUMP PASS
+  
+  OPTIONS
+    atime / noatime           access time information
+    auto / noauto             can or cannot be mounted automatically with -a
+    defaults                  pass options rw, suid, dev, exec, auto, nouser, async to mount
+    dev / nodev               whether character or block devices in mounted filesystem should be interpreted
+    exec / noexec             allow or deny permission to execute binaries on filesystem
+    user / nouser             allows or not an ordianary user to mount fileysystem
+    group                     allows a user to mount filesystem if user belongs in owning group
+    owner                     allows a user to mount filesystem if user owns device
+    suid / nosuid             allow or not SETUID and SETGID bits to take effect
+    ro / rw                   mount a filesystem as read-only or writable
+    remount                   use with -o to remount with different options
+    sync / async              do all I/O ops to filesystem synchronously or asynchronously
+
+  
 
 
 
