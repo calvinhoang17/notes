@@ -104,12 +104,12 @@ lsof DEVICE
 ```
 ### File permissions and ownership
 ```
-    drwxrwxrwx -   filetype-owner(u)-group(g)-others(o)
-
   ls
     -l       long form
     -d       directory
     -a       show hidden files (.)
+
+ drwxrwxrwx -   filetype-owner(u)-group(g)-others(o)
 
   Filetypes
     -       normal file
@@ -119,17 +119,41 @@ lsof DEVICE
     c       character device
     s       socket
 
+  Permissions
+    r       read, 4
+    w       write, 2
+    x       execute, 1
 
+  chmod PERMISSION FILENAME
+    -R      recursive
 
+    symbolic mode
+      u,g,o,a / +,-,= / r,w,x
+    ocatal mode
+      r = 4, w = 2, x = 1, - = 0
 
+  chown USERNAME:GROUPNAME FILENAME
+  chgrp GROUPNAME FILENAME
+  getent group
+  groups USER
+  groupmems -g GROUP -l
 
+  umask
+    -S      show symbolic mode
 
+  *Special Permissions
 
+    Sticky bit (restricted deletion flag)
+      1, t
 
+    Set GID (SGID, Set Group ID)
+      2, s on group 
 
-
-
-
+    Set UID (SUID, Set User ID)
+      4, s on user 
+```
+### File permissions and ownership
+```
 
 
 ```
