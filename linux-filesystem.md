@@ -104,8 +104,20 @@ lsof DEVICE
 ```
 ### File permissions and ownership
 ```
+    drwxrwxrwx -   filetype-owner(u)-group(g)-others(o)
 
+  ls
+    -l       long form
+    -d       directory
+    -a       show hidden files (.)
 
+  Filetypes
+    -       normal file
+    d       directory
+    l       symbolic link
+    b       block device
+    c       character device
+    s       socket
 
 
 
