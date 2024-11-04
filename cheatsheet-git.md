@@ -2,17 +2,17 @@
 
 ## Setup 
 ```
-git config --global user.name "NAME"
-git config --global user.email "EMAIL" 
+  git config --global user.name "NAME"
+  git config --global user.email "EMAIL" 
 
 Initialize Git on working directory
-git init
+  git init
 
 Shows repo status 
-git status
+  git status
 
 Show commit log
-git log
+  git log
 ```
 
 ## Staging Environment
