@@ -7,7 +7,9 @@ git config --global user.email "EMAIL"
 ```
 
 Initialize Git on working directory
-```git init```
+```
+git init
+```
 Shows repo status 
 git status
 show commit log
