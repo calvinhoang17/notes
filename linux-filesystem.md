@@ -152,8 +152,69 @@ lsof DEVICE
     Set UID (SUID, Set User ID)
       4, s on user 
 ```
-### File permissions and ownership
+### Hard and symbolic links
 ```
+  Symbolic link (soft links)
+    #point to the path of another file
+  Hard link
+    #second name, additional entry in filesystem pointing to the same place (inode) on disk
 
+  ln TARGET LINK_NAME
+    -s       create symbolic link
+```
+### Filesystem Hierarchy Standard
+```
+  /                  root directory
+    /bin               essential binaries, avaiable to all users
+    /boot              boot process files, initrd + linux kernel
+    /dev               device files
+    /etc               host-specfic configuration files
+    /home              users home directory
+    /lib               shared libraries needed to boot OS and run binaries under /bin /sbin
+    /media             user-mountable media - USB, CD, memeory cards, external disk
+    /mnt               mount point for temp mounted filesystems
+    /opt               application software packages
+    /root              root home directory
+    /run               run-time variable data
+    /sbin              system binaries
+    /srv               data served by system
+    /tmp               temporary files
+    /usr               read-only user data
+    /proc              virtual filesystem containing data related to running processes
+    /var               variable data written during system operation - logs, cache,
 
+  find LOCATION PARAMETERS
+    -name              filter by name
+    -iname             case-insensitive of -name
+    -maxdepth N        set subdirectory search level
+    -mindepth N        minimum depth
+    -mount             avoid mounted filsystem
+    -fstype            filter by filesystem
+    -user              match by owner user
+    -group             match by owner group
+    -readable          match files readable by current user
+    -writable          match files writable by current user
+    -perm NNNN         match by permissions
+    -empty             will match empty files and directories
+    -size N            match by N file size
+    -amin N, -cmin N, -mmin N
+    -atime N, -ctime N, -mtime N
+
+  locate
+    updatedb
+    -i               case-insensitive
+    -A               match ALL
+    -c               show count
+
+  which
+    -a               show all pathnames matching
+
+  type
+    -a               show all pathnames matching
+    -t               show file type of command
+
+  whereis
+    -b               limit to binaries
+    -m               limit to man pages
+    -s               limit to source code
 ```
