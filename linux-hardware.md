@@ -75,17 +75,43 @@
       --list-boots                    shows list of boot numbers relative to current boot, id hash, timestamps
 ```
 
-
-### 
+### System Processes
 ```
+  SysVinit
+    # /sbin/inittab
+    runlevels:
+      0                      system shutdown
+      1, s, single           single user mode, no network, maintenance mode
+      2, 3, 4                multi-user mode, console or network
+      5                      multi-user mode, 3 + graphical mode login
+      6                      system restart     
 
+    /etc/inittab              id:runlevels:action:process
+    telinit q    #apply changes
 
-```
+    runlevel
 
+  Systemd
+    7 types:
+      service        active system resources that can be initiated, interrupted and reloaded
+      socket         filesystem socket or network socket
+      device         hardware device identified by kernel
+      mount          mount point definition in filesystem
+      automount      auto mount point
+      target         group of units managed as one
+      snapshot       saved state of systemd manager
 
+  Systemctl ACTION UNIT.SERVICE
+    ACTIONS: start, stop, restart, status, is-active, enable, disable, is-enabled, isolate, set-default, get-default
 
-### 
-```
+  Upstart
+    #  /etc/init/
 
+    initctl list
+      start PROCESS
+      status PROCESS
+      stop PROCESS
 
+  shutdown [option] TIME [message]
+    time: hh:mm, +m, now or +0
 ```
