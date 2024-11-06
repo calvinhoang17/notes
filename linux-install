@@ -1,4 +1,4 @@
-# Linux Installation and Package Management
+# Linux Installation
 
 ### Boot Partition
 ```
@@ -23,7 +23,8 @@
     GRUB_CMDLINE_LINUX_DEFAULT=    extra parameters added to default entry
     GRUB_ENABLE_CRYPTODISK=        allows to search for encrypted disks
 
-  
+
+
 
 ```
 
