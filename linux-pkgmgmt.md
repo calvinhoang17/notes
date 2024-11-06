@@ -38,16 +38,81 @@
     update          update package cache
     list            list contents of a package
     search          search all packages for a file
-  
-  /etc/apt/sources.list
-  /etc/apt/sources.list.d
-    #list of sources to know where to get packages from
 
-    syntax:  ARCHIVETYPE-URL-DISTRIBUTION-COMPONENETS (main, restricted, universe, multiverse, contrib, non-free, security, backports)
+  Software Repositories
+      /etc/apt/sources.list
+      /etc/apt/sources.list.d
+        #list of sources to know where to get packages from
+    
+        syntax:  ARCHIVETYPE-URL-DISTRIBUTION-COMPONENETS (main, restricted, universe, multiverse, contrib, non-free, security, backports)
 ```
-### Advanced PAckage Tool (apt) 
+### RPM Package Manager (rpm) 
 ```
+  .rpm files
+
+  rpm PACKAGENAME
+    -i                install package
+    -U                upgrade to newer version
+    -F                only upgradge an installed package
+    -v                verbose output
+    -h                print hash signs # for visual aid
+    -e                erase or remove
+    -qa               list all installed packages on system
+    -qi               get info about an installed package (version number, architecture, install date , packager, summary)
+    -ql               list files inside an installed package
+    -p                get info from a package that has no benn installed yet
+    -qf               query file, must provide full paht
 ```
-### Advanced PAckage Tool (apt) 
+### YellowDog Updater Modified (YUM) 
 ```
+  yum search PATTERN
+  yum install PACKAGENAME
+  yum update PACKAGENAME
+  yum whatprovides PACKAGENAME          search for package dependencies
+  yum info PACKAGENAME
+
+  /etc/yum.conf
+  /etc/yum.repos.d/
+
+  Software Repositories
+      yum-config-manager
+          --add-repo URL
+          --disable updates
+          --enable updates
+      yum repolist all
+```
+
+### DNF
+```
+    #for of yum
+
+  dnf
+    search PATTERN
+    info PACKAGENAME
+    install PACKAGENAME
+    remove PACKAGENAME
+    upgrade PACKAGENAME
+    provides FILENAME
+    list --installed
+    repoquery -l PACKAGENAME
+    repolist
+```
+
+### Zypper
+```
+  zypper
+    refresh         refresh repositories and metadata
+    se / search     search for a package
+    -i              list installed packages in system
+    in              install a package
+    rm              remove a package
+    info            see metadata associated with a package
+    repos           see list of repositories currently registered in system
+    modifyrepo      
+      -d              disable
+      -e              enable
+      -F              disable repo autorefresh
+      -f              enable repo autorefresh
+    addrepo
+    removerepo
 ```
