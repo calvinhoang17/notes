@@ -57,7 +57,7 @@ Pull (fetch + merge)
   git pull origin
 ```
 
-##Github Cloning repo
+## Github Cloning repo
 ```
   git clone [LINK]
 ```
