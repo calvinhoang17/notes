@@ -84,7 +84,7 @@
 
 ### DNF
 ```
-    #for of yum
+    #fork of yum
 
   dnf
     search PATTERN
