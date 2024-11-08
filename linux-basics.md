@@ -89,10 +89,21 @@
     [ ]      #represents any occurrence of charcters enclosed in square brackets
     
 ```
-### Data Integriy
+### Find Files
 ```
-  sha256sum  FILE
-    -c        
+  find STARTING_PATH OPTIONS EXPRESSION
+    -name        search by name
+    -type f      file search
+    -type d      directory search
+    -type l      symbolic link search
+    -iname       by name, case insensitive
+    -not         return results that do not match
+    -maxdepth N  searches directory N levels deep
+    -mtime N     search by modfication time
+    -size (+,-)  search by size
+    -exec        perform action after search
+    -delete      delete files
+  
 ```
 
 
