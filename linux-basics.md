@@ -62,24 +62,33 @@
   Escape charcters
     ""              #will preserve all characters expect $ ,` ,\ , !
     ''              #will preserve literal value of all characters
-  stdin             #standard input
-  stdout            #standard output
-  stderr            #standard error
+
+  Redirects
+    stdin             #standard input    0 
+    stdout            #standard output   1  
+    stderr            #standard error    2
+
+    &> or >&          redirect stdout and stderr
+    /dev/null         blackhole
+
+    >            #direct output
+    <            #redirect right to left
+    >>           #append redirection
+    <<           #Here document and Here string method
+    |            #pipes
+    ``           #command substitution - output
+
+
   cat               #concatenate, outputs stuff
   diff              #shows difference between 2 files
   grep              #filter text
     -v                invert match
-
-  Operators
-    >            #direct output
-    >>           #append redirection
-    |            #pipes
-
   head              #read first 10 lines
   tail              #read last 10 lines
     -n #              define number of lines to show   
   wc                #word count
     -l                 print number of lines
+  tee               #display output on screen
 
   sed        #stream editor for filtering and transforming text
 
@@ -103,20 +112,60 @@
     -size (+,-)  search by size
     -exec        perform action after search
     -delete      delete files
+```
+### Archive Files
+```
+  tar -cvf NAME.tar PATH
+    -c        create an archive
+    -v        verbose mode
+    -f        specify filename
+    -x        extract archive
+    -z        use gzip algorithm (.tar.gz or .tgz)
+    -j        use bzip2 algorithm (.tar.bz2, .tar.bz, .tbz)
+
+  gzip FILE-TO-COMPRESS
+    #.gz file
+    #removes original files after compressing
+    gunzip       to uncompress
+  bzip2 FILE-TO-COMPRESS
+    bunzip2       to uncompressed
+    #similar to gzip
+
+  cpio        #copy in, copy out - .cpio or .tar
+    -o          output
+    -i          extract
+    -d          create destination folder
+
+  dd  if=oldfile of=newfile
+    conv=ucase        changing case
+    
+```
+### Processes
+```
+  jobs
+    -l        display process ID (PID)
+    -n        list only processes changed since last notification
+    -p        list process ID
+    -r        list only running jobs
+    -s        list only stopped jobs
+    %n        jobs with id number n
+    %?str     jobs whose command line contains str
+    %+ %%     current job
+    %-        previous jobs
+
+  fg        #take job to foreground
+  bg        #take job to background
+  &         #use with commands to take job to bg
+  kill      #SIGTERM
+
+  nohup COMMAND &        #detacj jobs from sessions
+
+  watch    #allows to watch program output overtime
+    -n        interval
   
-```
+  pgrep PROCESS      #find PID of a procress
+  pkill PROCESS      #kill a process by name
 
-
-
-### subtitle
-```
-```
-
-
-
-
-### subtitle
-```
 ```
 
 
