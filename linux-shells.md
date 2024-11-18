@@ -57,6 +57,14 @@
             /etc/bash.bashrc    # makes sures being run interactively
         local-level ( ~ )
             ~/.bashrc           # stores user's specfic aliases and functions
+
+    Non-Interactive login shell
+    Non-Interactive non-login shell
+
+  SKEL  #variable whose value is the absolute path of skel directory
+        #directory servers are template for file system structure of users' hoem directories
+        #/etc/adduser.conf  
+        
 ```
 
 ### subtitle
