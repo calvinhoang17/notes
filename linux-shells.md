@@ -66,9 +66,35 @@
         #/etc/adduser.conf  
         
 ```
-
-### subtitle
+### Customize shell environment
 ```
+  Assigning variables:       <variable_name>=<variable_value>
+  Check variable:            echo $<variable>
+
+  readonly <variable_name>=<variable_value>   #make variable immutable
+  set <variable>    #outputs currently assigned variables and functions and 
+  unset <variable>  #unset variable local or global
+  export <variable> #set local variable to environment
+
+  Common Environment Variables
+    DISPLAY
+    HISTCONTROL
+    HISTSIZE
+    HISTFILESIZE
+    HISTFILE
+    HOME
+    HOSTNAME
+    LANG
+    LD_LIBRARY_PATH
+    MAIL
+    MAILCHECK
+    PATH
+    PS[1 - 4]
+    SHELL
+    USER
+    
+  
+
 ```
 
 ### subtitle
