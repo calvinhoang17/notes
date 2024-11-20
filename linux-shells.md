@@ -74,6 +74,8 @@
   readonly <variable_name>=<variable_value>   #make variable immutable
   set <variable>    #outputs currently assigned variables and functions and 
   unset <variable>  #unset variable local or global
+    -v    for variables
+    -f    for functions
   export <variable> #set local variable to environment
 
   Common Environment Variables
@@ -92,13 +94,29 @@
     PS[1 - 4]
     SHELL
     USER
+
+  alias alias_name=command(s)      #create an alias
+  unalias alias_name               #remove an alias
+  ''      #dynamic expansion
+  ""      #static expansion
+
+  function function_name { }
+  function_name() { }
     
-  
+  Bash special variables:
+    $?       expands results of last command run, 0 = sucess, >0 = error
+    $$       shell PID
+    $!       PID of last background job
+    $[0-9]   parameters or arguments neing passed to function
+    $#       number of arguments passed to commands
+    $@, $*   arguments passed to command
+    $_       last parameter or name of script  
 
 ```
-
-### subtitle
+### 
 ```
+
+
 ```
 
 
