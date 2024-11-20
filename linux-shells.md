@@ -113,18 +113,119 @@
     $_       last parameter or name of script  
 
 ```
-### 
+### Simple scripts
+```
+  #!      #shebang
+  #!/bin/bash          #start of all bash scripts
+  chmod +x script.sh   #allow for execution bit
+
+  Bash script parameters
+  $*          all arguments passed to the script
+  $@          all arugments passed to the script. if double quotes, every argument will be double quotes
+  $#          number of arguments
+  $0          name of script file
+  $!          PID of last executed program
+  $$          PID of current shell
+  $?          numberical exit status code
+  ``          use to store output of a command in a variable
+
+  Arithmetic Expressions
+    expr or $(())
+
+  Conditional Execution
+    &&        command to right will only be executed if left did not enocunter error
+    ||        command will be executed only if previous command did encounter an error
+    if fi     if statement
+    else      else statement
+
+    echo
+      -e      allow special characters output
+      \t      align text
+      \n      new line output
+      
+    Extended Tests
+      test or [ ]
+      -a "$VAR"            if exists in filesystem and is a file
+      -b "$VAR"            if is special block file
+      -c "$VAR"            if is a directory
+      -f "$VAR"            if exists in filesystem
+      -g "$VAR"            if has SGID permissions
+      -h "$VAR"            if is symbolic link
+      -L "$VAR"            if is symbolic link
+      -k "$VAR"            if has sticky bit permission
+      -p "$VAR"            if is pipe file
+      -r "$VAR"            if is readable by current user
+      -s "$VAR"            if exists and not empty
+      -S "$VAR"            is a socket file
+      -t "$VAR"            is open in a terminal
+      -u "$VAR"            has SUID permission
+      -w "$VAR"            is writable by current user
+      -x "$VAR"            is executable by current user
+      -O "$VAR"            is owned by current user
+      -G "$VAR"            belongs to effective group of current user
+      -N "$VAR"            has been modifed since last time accessed
+      "$VAR1" -nt "$VAR2"  if VAR1 is newer than VAR2
+      "$VAR1" -ot "$VAR2"  if VAR1 is older than VAR2
+      "$VAR1" -ef "$VAR2"  if VAR1 is hardlink to VAR2
+
+      Arbitrary text variables
+      -z "$TXT"
+      Evaluate if variable TXT is empty (zero size).
+      
+      -n "$TXT" or test "$TXT"
+      Evaluate if variable TXT is not empty.
+      
+      "$TXT1" = "$TXT2" or "$TXT1" == "$TXT2"
+      Evaluate if TXT1 and TXT2 are equal.
+      
+      "$TXT1" != "$TXT2"
+      Evaluate if TXT1 and TXT2 are not equal.
+      
+      "$TXT1" < "$TXT2"
+      Evaluate if TXT1 comes before TXT2, in alphabetical order.
+      
+      "$TXT1" > "$TXT2"
+      Evaluate if TXT1 comes after TXT2, in alphabetical order.
+
+      $NUM1 -lt $NUM2
+      Evaluate if NUM1 is less than NUM2.
+      
+      $NUM1 -gt $NUM2
+      Evaluate if NUM1 is greater than NUM2.
+      
+      $NUM1 -le $NUM2
+      Evaluate if NUM1 is less or equal to NUM2.
+      
+      $NUM1 -ge $NUM2
+      Evaluate if NUM1 is greater or equal to NUM2.
+      
+      $NUM1 -eq $NUM2
+      Evaluate if NUM1 is equal to NUM2.
+      
+      $NUM1 -ne $NUM2
+      Evaluate if NUM1 is not equal to NUM2.
+
+      ! EXPR
+      Evaluate if the expression EXPR is false.
+      
+      EXPR1 -a EXPR2
+      Evaluate if both EXPR1 and EXPR2 are true.
+      
+      EXPR1 -o EXPR2
+      Evaluate if at least one of the two expressions are true.
+
+      case
+          ;;
+          ;; *)
+      esac
+
+      Loop constructs
+        for VARNAME in LIST
+        do
+            COMMANDS
+        done
+
+        until, while
 ```
 
 
-```
-
-
-### subtitle
-```
-```
-
-
-### subtitle
-```
-```
