@@ -137,6 +137,27 @@
     systemctl start foobar.timer
 
     systemctl list-timers --all
+
+  at [options]     #run one-time task scheduling in the future
+    -c              print commands of specific job ID to std output
+    -d              delete jobs based on job ID (atrm)
+    -f              read job from a file instead of std input
+    -l              list pending jobs of user
+    -m              send mail to use at end
+    -q              specify a queue in form of a single letter
+    -v              show time at which job will run before running
+
+    atq    #list pending jobs
+    atrm   #delete at job
+
+    /etc/at.allow
+    /etc/at.deny
+
+  systemd-run
+    --on-calendar=
+    --on-active=
+  
+
 ```
 
 ### subtitle
