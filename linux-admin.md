@@ -71,9 +71,23 @@
     -M                           set maxium password lifetime
     -W                           set number of days of warning before password expires
 
+  /etc
+    -  /passwd              #basic information about users
+    -  /group               #basic information about groups
+    -  /shadow              #contains encrypted user passwords
+    -  /gshadow             #contains encrypted group passwords
+
+  /etc/passwd      username:password:UID:GID:GECOS:homedirectory:shell
+  /etc/group       groupname:grouppassword:GID:memberlist
+  /etc/shadow      username:encryptedpassword:dateoflastpasswordchange:minpasswordage:maxpasswordage:passwordwarningperiod:passwordinactvityperiod:expirationdate:reservedfield
+  /etc/gshadow     groupname:encryptedpassword:groupadmins:groupmembers
+
+  getent [option] NAME    #display enries from databases
+  
+
 ```
 
-### subtitle
+### 
 ```
 ```
 
