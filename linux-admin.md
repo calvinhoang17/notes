@@ -136,6 +136,7 @@
     systemctl enable foobar.timer
     systemctl start foobar.timer
 
+    systemctl list-timers --all
 ```
 
 ### subtitle
