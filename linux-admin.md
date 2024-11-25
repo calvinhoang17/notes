@@ -87,8 +87,55 @@
 
 ```
 
-### 
+### Automate tasks by scheduling jobs
 ```
+  /etc/crontab
+  
+  User crontabs    #/var/spool/cron
+  System crontabs  #/etc/crontab, /etc/cron.d
+
+  *  (asterik) refers to any value
+  ,  (comma)   specifies list of possible values
+  -  (dash)    specifies range of possible values
+  /  (slash)   specficies stepped values
+
+  /etc/cron.hourly
+  /etc/cron.daily
+  /etc/cron.weekly
+  /etc/cron.monthly
+
+  @reboot                run specified task afte reboot
+  @hourly                run specfied task once an hour at beginning of hour
+  @daily or @midnight    run specfied task once a day at midnight
+  @weekly                run specfied task once a week at midnight on Sunday
+  @monthly               run specfied task once a month at midnight on first day of month
+  @yearly or @annually   run specfied task once a year at midnight on 1st of january
+
+  Variables:
+  HOME        directory where cron invokes commands
+  MAILTO      name of user or address where std output and error is mailed to
+  PATH        path where commands can be found
+  SHELL       shell to use
+
+  crontab -e      #to edit crontabe file 
+    -l            display current crontab
+    -r            remove current crontab
+    -u            specify name of user crontabe
+
+  Access to job scheduling
+    /etc/cron.allow
+    /etc/cron.deny
+
+  Systemd Timers
+    /etc/systemd/system/foobar.service
+    /etc/systemd/system/foobar.timer
+
+    [Timer]
+    OnCalendar= DayOfWeek Year-Month-Day Hour:Minute:Second
+
+    systemctl enable foobar.timer
+    systemctl start foobar.timer
+
 ```
 
 ### subtitle
