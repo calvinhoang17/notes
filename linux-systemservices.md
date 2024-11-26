@@ -52,9 +52,66 @@
 
 ### System logging
 ```
+  syslog
+  syslog-ng  (syslog new generation)
+  rsyslog    (rocket-fast system for log processing)
 
+  #  /var/log
+  /auth.log        auth process: logges users, sudo info, cron jobs, failed login attempts
+  /syslog          centralized file for all logs
+  /debug           debug info
+  /messages        info messages not related to kernel but other services
+  /daemon.log      info relared to daemons or services
+  /mail.log        info related to email server
+  /Xorg.0.log      info related to graphics card
+  /wtmp            sucessful logins
+  /btmp            unsucessful logins
+  /faillog         failed authentication attempts
+  /lastlog         date and time of recent user logins
 
+  zless or zmore     #used for compressed log files
 
+  to view:
+    /var/log/wtmp        who or w
+    /var/log/btmp        utmpdump or last -f
+    /var/log/faillog     faillog
+    /var/log/lastlog     lastlog
+
+  rsyslog
+    #  /etc/rsyslog.conf.d
+
+  logrotate
+    /etc/cron.daily/logrotate      #cronjob
+    /etc/logrotate.conf            #config file
+    /etc/logrotate.d
+
+  systemd-journald
+    # /etc/systemd/journald.conf
+
+    journalctl
+      -r                              reverse order
+      -f                              live-mode, most recent
+      -e                              jump to end
+      -n <value>, --lines=<value>     show specify lines
+      -k, --dmesg
+      --list-boots                    list all available boots
+      -b, --boot                      shows all message from current boot
+      -p                              filter by serverity/priority
+      --since, --until                filter by time, YYYY-MM-DD HH:MM:SS
+      /path/to/executable             filter by specfified unit
+      <field-name>=<value>            PRIORITY=, SySLOG_FACILITY=, _PID=, _BOOT_ID=, _TRANSPORT=,
+      --disk-usage                    check file size
+      --vaccum-time=                  eliminate all messages from specified time
+      --vaccum-size=                  eliminate all messages from specfifed size
+      --vaccum-files=                 eliminate all messages from x file
+      --flush (SIGUSR1)               flush jounral from /run/ to /var/
+      --sync (SIGRTMIN+1)             request all unwritten log data to be written to disk
+      -D </path/to/dir>, --directory=</path/to/dir>
+      -m, --merge                     merges entries from all availabe under /var/log/journal
+      --file                          define file
+      --root                          root directory
+
+      systemd-cat    #manual send logs
 ```
 
 ### Mail Transfer Agent (MTA)
