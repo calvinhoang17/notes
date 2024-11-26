@@ -160,6 +160,24 @@
 
 ### Localisation and internationalisation
 ```
+/etc/timezone
+date             #displays computer date
+timedataectl     #shows detailed system time and date
+tzselect         #interactive time zone selection
+
+/etc/locale/conf
+LANG=pt_BR.UTF-8
+
+LC_COLLATE       sets alphabetical ordering
+LC_TYPE          sets how system treat certain sets of characters (uppercase/lowercase)
+LC_MESSAGES      sets language to display program messages
+LC_MONETARY      sets money unit and currency format
+LC_NUMBERIC      sets numerical format for non-monetart values
+LC_TIME          sets time and date format
+LC_PAPER         sets standard paper size
+LC_ALL           soverride all other variables
+
+locale      #show all defined variables in current locale config
 
 ```
 
