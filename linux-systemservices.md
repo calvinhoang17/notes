@@ -114,16 +114,16 @@
       systemd-cat    #manual send logs
 ```
 
-### Mail Transfer Agent (MTA)
-```
-
-
-
-```
-
 ### Manage printers and printing
 ```
+  CUPS - Common Unix Printing System
+    /etc/cups/cupsd.conf         #CUPS config file
+    /etc/printcap                #legacy file used by LPD protocol - backward comp
+    /etc/cups/printers.conf      #file contains each printer configured
+    /etc/cups/ppd                #directory that holds PostScript Printer Description (PPD) files
+    /var/log/cups
 
+    
 
 
 ```
