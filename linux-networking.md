@@ -30,6 +30,51 @@ Port	Service
 
 ### Network Config
 ```
+  /etc/network/interfaces
+  
+  ip link show
+  nmcli device 
+
+  Interface Naming:
+    en                Ethernet
+    ib                InfiniBand
+    sl                Serial line IP (slip)
+    wl                Wirless local area network (WLAN)
+    ww                Wireless wide area netowrk (WWAN)
+    eno1              index provided by BIOS or firmware of embedded devices
+    ens1              PCI express slot index
+    enp3s5            address at corresponding bus
+    enx78e7dlea46da   interface's MAC address
+    eth0              legacy convention
+
+    /etc/hostname  
+    hostnamectl
+      set-hostname
+      status
+      --pretty
+      --transient
+
+  /etc/nsswitch.conf        #Name Service Switch config file
+  /etc/hosts                #local file of hosts database
+  /etc/resolv.conf          #dns resolver config 
+
+  Network Manager
+    nmcli
+      general
+      networking
+      radio
+      connection
+      device
+      agent
+      monitor
+
+  Systemd-networkd
+    /lib/systemd/network
+    /run/systemmd/network
+    /etc/systemd/network
+
+    
+    
 ```
 
 ### Network Troubleshooting
