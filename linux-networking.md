@@ -72,13 +72,11 @@ Port	Service
     /lib/systemd/network
     /run/systemmd/network
     /etc/systemd/network
-
-    
-    
 ```
 
 ### Network Troubleshooting
 ```
+
 ```
 
 
