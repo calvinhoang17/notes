@@ -30,8 +30,52 @@ Password Management and Aging
       -I <days> <user>, --inactive <days> <user>       #specify # of inactive days after password expiration
       -E <date> <user>, --expiredate <date> <user>     #specify date on which account will be locked
 
-   Discovering Open Ports 
+Discovering Open Ports 
+  lsof - list open files
+    -i        print all Internet network files
+      @ip-address
+      :port
+  
+  fuser .  
+    -v        verbose
+    -n        network port/sockets
 
+  netstat
+    -l, --listening        #list listening ports and sockets
+    -t, --tcp
+    -u, --udp
+    -e, --extend           #extended information
+    -n, --numeric          #print only port numbers and IP addresses
+
+  nmap  #host scanner
+    -p          #define port
+    -F          #run fast scan on 100 most common ports
+    -v, -vv     #vervbose
+
+  ulimit  #user limit on OS
+    -a, -Sa        display soft limits
+    -Ha            display hard limits
+    -b             max socket buffer size
+    -f             max size of files written by shell and its children
+    -l             max size locked into memory
+    -m             max RSS - current portion of memory held by a process in RAM
+    -v             max amount of virtual memory
+    -u             max number of process available to single user
+  
+Logged in Users
+  last          #prints listing of last logged in users
+  who           #shows currently logged in users
+    -b,--boot      display last system boot
+    -r,--runlevel  display current runlevel
+    -H,--heading   print column heading
+
+Sudo
+  su - <target-username>
+
+  /etc/sudoers
+  sudo useradd -aG sudo <user>  
+  
+     
 ```
 
 
